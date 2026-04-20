@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>College Fest 2026 – Ignite the Future</title>
+  <meta name="description"
+    content="Join College Fest 2026 – Ignite the Future! Experience electrifying events, workshops, performances, and more at the biggest college festival of the year." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="nav-logo">
+        <img src="logo.png" alt="Ignite Logo" class="logo-icon" width="50px" height="50px">
+        <span class="logo-text">IGNITE<span class="logo-accent">'26</span></span>
+      </a>
+    </div>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox" />
+    <label for="nav-toggle" class="nav-toggle-label">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="#schedule">Schedule</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="food-stalls.html">Food Stalls</a></li>
+      <li><a href="register.html" class="nav-cta">Register Now</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg-effects">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="grid-overlay"></div>
+      <div class="particle particle-1"></div>
+      <div class="particle particle-2"></div>
+      <div class="particle particle-3"></div>
+      <div class="particle particle-4"></div>
+      <div class="particle particle-5"></div>
+      <div class="particle particle-6"></div>
+      <div class="particle particle-7"></div>
+      <div class="particle particle-8"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-tag">🚀 April 25 – 27, 2026 &bull; Campus Central Arena</p>
+      <h1 class="hero-title">
+        <span class="hero-line">College Fest</span>
+        <span class="hero-line hero-year">2026</span>
+        <span class="hero-line hero-subtitle-line">Ignite the Future</span>
+      </h1>
+      <p class="hero-description">
+        Three epic days of innovation, creativity, and celebration. 50+ events,
+        world-class speakers, and unforgettable performances await you.
+      </p>
+      <div class="hero-actions">
+        <a href="#register" class="btn btn-primary">Register Now</a>
+        <a href="events.html" class="btn btn-outline">Explore Events</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">50+</span>
+          <span class="stat-label">Events</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">10K+</span>
+          <span class="stat-label">Attendees</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">3</span>
+          <span class="stat-label">Days</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">₹5L</span>
+          <span class="stat-label">Prize Pool</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <!--<div class="scroll-arrow"></div>-->
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Who We Are</span>
+        <h2 class="section-title">About The Fest</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-card about-main">
+          <div class="about-icon">🎯</div>
+          <h3>Our Vision</h3>
+          <p>
+            College Fest 2026 is the flagship annual cultural and technical festival
+            that brings together the brightest minds, creative souls, and passionate
+            performers under one roof. "Ignite the Future" is our call to action —
+            pushing boundaries, sparking innovation, and celebrating talent.
+          </p>
+        </div>
+        <div class="about-card">
+          <div class="about-icon">🎨</div>
+          <h3>Cultural</h3>
+          <p>Dance battles, music concerts, art exhibitions, open mic nights, and theatrical performances.</p>
+        </div>
+        <div class="about-card">
+          <div class="about-icon">💻</div>
+          <h3>Technical</h3>
+          <p>Hackathons, coding contests, robotics challenges, AI workshops, and startup pitches.</p>
+        </div>
+        <div class="about-card">
+          <div class="about-icon">🏆</div>
+          <h3>Sports</h3>
+          <p>E-sports tournaments, cricket, basketball, athletics, and inter-college championships.</p>
+        </div>
+        <a href="food-stalls.html">
+          <div class="about-card">
+            <div class="about-icon">🍔</div>
+            <h3>Food & Fun</h3>
+            <p>Food stalls, carnival rides, VR experiences, photo booths, and a midnight DJ night.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EVENTS SECTION ===== -->
+  <section class="events" id="events">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What Awaits</span>
+        <h2 class="section-title">Featured Events</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="events-grid">
+
+        <a href="event-hacknova.html" class="event-card" id="event-hackathon">
+          <div class="event-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+            <span class="event-emoji">💻</span>
+          </div>
+          <div class="event-badge">Technical</div>
+          <div class="event-content">
+            <h3>HackNova 2026</h3>
+            <p>36-hour hackathon challenge. Build, innovate, win big. Open to all colleges.</p>
+            <div class="event-meta">
+              <span>📅 Apr 25</span>
+              <span>👥 Teams of 4</span>
+              <span>🏆 ₹1,00,000</span>
+            </div>
+            <span class="event-link">View Details →</span>
+          </div>
+        </a>
+
+        <a href="event-dance.html" class="event-card" id="event-dance">
+          <div class="event-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+            <span class="event-emoji">💃</span>
+          </div>
+          <div class="event-badge badge-cultural">Cultural</div>
+          <div class="event-content">
+            <h3>Dance Inferno</h3>
+            <p>Inter-college dance battle. Solo, duet, and group categories with celebrity judges.</p>
+            <div class="event-meta">
+              <span>📅 Apr 26</span>
+              <span>👥 Solo & Groups</span>
+              <span>🏆 ₹50,000</span>
+            </div>
+            <span class="event-link">View Details →</span>
+          </div>
+        </a>
+
+        <a href="event-robowars.html" class="event-card" id="event-robotics">
+          <div class="event-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+            <span class="event-emoji">🤖</span>
+          </div>
+          <div class="event-badge">Technical</div>
+          <div class="event-content">
+            <h3>RoboWars</h3>
+            <p>Build combat robots and battle it out in the arena. Destruction guaranteed!</p>
+            <div class="event-meta">
+              <span>📅 Apr 25-26</span>
+              <span>👥 Teams of 3</span>
+              <span>🏆 ₹75,000</span>
+            </div>
+            <span class="event-link">View Details →</span>
+          </div>
+        </a>
+
+        <a href="event-bands.html" class="event-card" id="event-music">
+          <div class="event-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+            <span class="event-emoji">🎵</span>
+          </div>
+          <div class="event-badge badge-cultural">Cultural</div>
+          <div class="event-content">
+            <h3>Battle of Bands</h3>
+            <p>Rock, pop, fusion — bring your best. Compete on the grand stage for glory.</p>
+            <div class="event-meta">
+              <span>📅 Apr 26</span>
+              <span>👥 Bands of 3-6</span>
+              <span>🏆 ₹60,000</span>
+            </div>
+            <span class="event-link">View Details →</span>
+          </div>
+        </a>
+
+        <a href="event-valorant.html" class="event-card" id="event-esports">
+          <div class="event-image" style="background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);">
+            <span class="event-emoji">🎮</span>
+          </div>
+          <div class="event-badge badge-sports">E-Sports</div>
+          <div class="event-content">
+            <h3>Valorant Championship</h3>
+            <p>5v5 tactical shooter tournament. Prove your aim and strategy on the big screen.</p>
+            <div class="event-meta">
+              <span>📅 Apr 25-27</span>
+              <span>👥 Teams of 5</span>
+              <span>🏆 ₹80,000</span>
+            </div>
+            <span class="event-link">View Details →</span>
+          </div>
+        </a>
+
+        <a href="event-startup.html" class="event-card" id="event-startup">
+          <div class="event-image" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);">
+            <span class="event-emoji">🚀</span>
+          </div>
+          <div class="event-badge">Technical</div>
+          <div class="event-content">
+            <h3>Startup Pitch Arena</h3>
+            <p>Pitch your startup idea to top VCs and industry leaders. Get funded on the spot!</p>
+            <div class="event-meta">
+              <span>📅 Apr 27</span>
+              <span>👥 Teams of 1-3</span>
+              <span>🏆 ₹2,00,000</span>
+            </div>
+            <span class="event-link">View Details →</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SCHEDULE SECTION ===== -->
+  <section class="schedule" id="schedule">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Plan Your Visit</span>
+        <h2 class="section-title">Event Schedule</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="schedule-wrapper">
+
+        <!-- Day 1 -->
+        <div class="schedule-day">
+          <div class="day-header">
+            <span class="day-number">01</span>
+            <div>
+              <h3>Day 1 — The Spark</h3>
+              <p>April 25, 2026</p>
+            </div>
+          </div>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-time">9:00 AM</div>
+              <div class="timeline-content">
+                <h4>Grand Inauguration</h4>
+                <p>Opening ceremony with the chief guest &amp; lamp lighting</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-time">10:30 AM</div>
+              <div class="timeline-content">
+                <h4>HackNova Kickoff</h4>
+                <p>36-hour hackathon begins — problem statements revealed</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-time">2:00 PM</div>
+              <div class="timeline-content">
+                <h4>RoboWars Qualifiers</h4>
+                <p>Preliminary rounds of the robot combat tournament</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-time">6:00 PM</div>
+              <div class="timeline-content">
+                <h4>Open Mic Night</h4>
+                <p>Poetry, standup comedy, and storytelling on the main stage</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 2 -->
+        <div class="schedule-day">
+          <div class="day-header">
+            <span class="day-number">02</span>
+            <div>
+              <h3>Day 2 — The Blaze</h3>
+              <p>April 26, 2026</p>
+            </div>
+          </div>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-time">10:00 AM</div>
+              <div class="timeline-content">
+                <h4>Dance Inferno Prelims</h4>
+                <p>Solo and group dance preliminary rounds</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-time">12:00 PM</div>
+              <div class="timeline-content">
+                <h4>AI/ML Workshop</h4>
+                <p>Hands-on workshop by industry experts from Google</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-time">3:00 PM</div>
+              <div class="timeline-content">
+                <h4>Battle of Bands</h4>
+                <p>Live band performances &amp; audience voting</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-time">8:00 PM</div>
+              <div class="timeline-content">
+                <h4>Star Night 🌟</h4>
+                <p>Live concert with a surprise celebrity performer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 3 -->
+        <div class="schedule-day">
+          <div class="day-header">
+            <span class="day-number">03</span>
+            <div>
+              <h3>Day 3 — The Inferno</h3>
+              <p>April 27, 2026</p>
+            </div>
+          </div>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-time">10:00 AM</div>
+              <div class="timeline-content">
+                <h4>Startup Pitch Arena</h4>
+                <p>Top 10 startups pitch to VC panel</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-time">1:00 PM</div>
+              <div class="timeline-content">
+                <h4>Dance Inferno Finals</h4>
+                <p>Grand finale with celebrity judges</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-time">4:00 PM</div>
+              <div class="timeline-content">
+                <h4>RoboWars Grand Finale</h4>
+                <p>Championship battle in the arena</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-time">7:00 PM</div>
+              <div class="timeline-content">
+                <h4>Closing Ceremony & DJ Night</h4>
+                <p>Prize distribution followed by an all-night party 🎉</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SPEAKERS SECTION ===== -->
+  <section class="speakers" id="speakers">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Learn From The Best</span>
+        <h2 class="section-title">Guest Speakers</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="speakers-grid">
+
+        <div onclick="window.location.href='speaker-arjun.html'" class="speaker-card" id="speaker-1" style="cursor: pointer;">
+          <div class="speaker-avatar" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+            <span>👨‍💻</span>
+          </div>
+          <h3>Arjun Mehta</h3>
+          <p class="speaker-role">CTO, TechVista Labs</p>
+          <p class="speaker-topic">"The Future of AI in Education"</p>
+          <div class="speaker-socials">
+            <a href="https://instagram.com" target="_blank" class="speaker-social-link instagram" onclick="event.stopPropagation();"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com" target="_blank" class="speaker-social-link x-twitter" onclick="event.stopPropagation();"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://linkedin.com" target="_blank" class="speaker-social-link linkedin" onclick="event.stopPropagation();"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div onclick="window.location.href='speaker-priya.html'" class="speaker-card" id="speaker-2" style="cursor: pointer;">
+          <div class="speaker-avatar" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+            <span>👩‍🔬</span>
+          </div>
+          <h3>Dr. Priya Sharma</h3>
+          <p class="speaker-role">Research Lead, ISRO</p>
+          <p class="speaker-topic">"Space Tech & India's Next Frontier"</p>
+          <div class="speaker-socials">
+            <a href="https://instagram.com" target="_blank" class="speaker-social-link instagram" onclick="event.stopPropagation();"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com" target="_blank" class="speaker-social-link x-twitter" onclick="event.stopPropagation();"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://linkedin.com" target="_blank" class="speaker-social-link linkedin" onclick="event.stopPropagation();"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div onclick="window.location.href='speaker-vikram.html'" class="speaker-card" id="speaker-3" style="cursor: pointer;">
+          <div class="speaker-avatar" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+            <span>👨‍🎨</span>
+          </div>
+          <h3>Vikram Desai</h3>
+          <p class="speaker-role">Design Head, Zomato</p>
+          <p class="speaker-topic">"Design Thinking for Startups"</p>
+          <div class="speaker-socials">
+            <a href="https://instagram.com" target="_blank" class="speaker-social-link instagram" onclick="event.stopPropagation();"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com" target="_blank" class="speaker-social-link x-twitter" onclick="event.stopPropagation();"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://linkedin.com" target="_blank" class="speaker-social-link linkedin" onclick="event.stopPropagation();"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div onclick="window.location.href='speaker-sneha.html'" class="speaker-card" id="speaker-4" style="cursor: pointer;">
+          <div class="speaker-avatar" style="background: linear-gradient(135deg, #fa709a, #fee140);">
+            <span>👩‍💼</span>
+          </div>
+          <h3>Sneha Kapoor</h3>
+          <p class="speaker-role">Founder, GreenTech India</p>
+          <p class="speaker-topic">"Building Sustainable Startups"</p>
+          <div class="speaker-socials">
+            <a href="https://instagram.com" target="_blank" class="speaker-social-link instagram" onclick="event.stopPropagation();"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com" target="_blank" class="speaker-social-link x-twitter" onclick="event.stopPropagation();"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://linkedin.com" target="_blank" class="speaker-social-link linkedin" onclick="event.stopPropagation();"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY SECTION ===== 
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Memories</span>
+        <h2 class="section-title">Past Highlights</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item gi-large" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+          <div class="gallery-overlay">
+            <span class="gallery-emoji">🎤</span>
+            <p>Star Night 2025</p>
+          </div>
+        </div>
+        <div class="gallery-item" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+          <div class="gallery-overlay">
+            <span class="gallery-emoji">💃</span>
+            <p>Dance Finals</p>
+          </div>
+        </div>
+        <div class="gallery-item" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+          <div class="gallery-overlay">
+            <span class="gallery-emoji">🤖</span>
+            <p>RoboWars Arena</p>
+          </div>
+        </div>
+        <div class="gallery-item" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+          <div class="gallery-overlay">
+            <span class="gallery-emoji">🎨</span>
+            <p>Art Exhibition</p>
+          </div>
+        </div>
+        <div class="gallery-item gi-wide" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);">
+          <div class="gallery-overlay">
+            <span class="gallery-emoji">💻</span>
+            <p>Hackathon 2025</p>
+          </div>
+        </div>
+        <div class="gallery-item" style="background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);">
+          <div class="gallery-overlay">
+            <span class="gallery-emoji">🏆</span>
+            <p>Prize Ceremony</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- ===== SPONSORS SECTION ===== -->
+  <section class="sponsors" id="sponsors">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Partners</span>
+        <h2 class="section-title">Sponsors</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="sponsor-tiers">
+        <div class="sponsor-logos-scroll">
+          <div class="sponsor-logos">
+            <div class="sponsor-logo sponsor-platinum">
+              <a href="https://www.amazon.in/" target="_blank"><img src="download.png"></a>
+            </div>
+            <div class="sponsor-logo sponsor-gold">
+              <span>🌐</span>
+              <p>CloudNine</p>
+            </div>
+            <div class="sponsor-logo sponsor-gold">
+              <span>🔮</span>
+              <p>NeoLabs</p>
+            </div>
+            <div class="sponsor-logo sponsor-gold">
+              <img src="Amrita-Vishwa-Vidyapeetham-Horizontal-Logo-Vector.svg-.png">
+            </div>
+            <div class="sponsor-logo sponsor-silver">
+              <span>📱</span>
+              <p>AppForge</p>
+            </div>
+            <div class="sponsor-logo sponsor-silver">
+              <span>☁️</span>
+              <p>SkyStack</p>
+            </div>
+            <div class="sponsor-logo sponsor-silver">
+              <span>🛡️</span>
+              <p>SecureNet</p>
+            </div>
+            <div class="sponsor-logo sponsor-silver">
+              <span>📊</span>
+              <p>DataPulse</p>
+            </div>
+            <div class="sponsor-logo sponsor-platinum">
+              <a href="https://www.amazon.in/" target="_blank"><img src="download.png"></a>
+            </div>
+            <div class="sponsor-logo sponsor-gold">
+              <span>🌐</span>
+              <p>CloudNine</p>
+            </div>
+            <div class="sponsor-logo sponsor-gold">
+              <span>🔮</span>
+              <p>NeoLabs</p>
+            </div>
+            <div class="sponsor-logo sponsor-gold">
+              <img src="Amrita-Vishwa-Vidyapeetham-Horizontal-Logo-Vector.svg-.png">
+            </div>
+            <div class="sponsor-logo sponsor-silver">
+              <span>📱</span>
+              <p>AppForge</p>
+            </div>
+            <div class="sponsor-logo sponsor-silver">
+              <span>☁️</span>
+              <p>SkyStack</p>
+            </div>
+            <div class="sponsor-logo sponsor-silver">
+              <span>🛡️</span>
+              <p>SecureNet</p>
+            </div>
+            <div class="sponsor-logo sponsor-silver">
+              <span>📊</span>
+              <p>DataPulse</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REGISTER / CTA SECTION ===== -->
+  <section class="register" id="register">
+    <div class="register-bg-effects">
+      <div class="orb orb-r1"></div>
+      <div class="orb orb-r2"></div>
+    </div>
+    <div class="container">
+      <div class="register-content">
+        <span class="section-tag">Don't Miss Out</span>
+        <h2 class="register-title">Ready to Ignite?</h2>
+        <p class="register-desc">
+          Registrations are filling up fast! Secure your spot at the biggest college fest of 2026.
+          Early bird passes available until April 20.
+        </p>
+        <div class="register-form-wrapper">
+          <form class="register-form" action="#" method="post">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="reg-name">Full Name</label>
+                <input type="text" id="reg-name" placeholder="Your full name" required />
+              </div>
+              <div class="form-group">
+                <label for="reg-email">Email Address</label>
+                <input type="email" id="reg-email" placeholder="you@example.com" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="reg-college">Campus</label>
+                <select id="reg-college" required>
+                  <option value="">Select your campus</option>
+                  <option>Amrita Vishwa Vidyapeetham – Coimbatore</option>
+                  <option>Amrita Vishwa Vidyapeetham – Amritapuri</option>
+                  <option>Amrita Vishwa Vidyapeetham – Bengaluru</option>
+                  <option>Amrita Vishwa Vidyapeetham – Chennai</option>
+                  <option>Amrita Vishwa Vidyapeetham – Amaravati</option>
+                  <option>Amrita Vishwa Vidyapeetham – Nagercoil</option>
+                  <option>Amrita Vishwa Vidyapeetham – Faridabad</option>
+                  <option>Amrita Vishwa Vidyapeetham – Haridwar</option>
+                  <option>Other College</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="reg-phone">Phone Number</label>
+                <input type="tel" id="reg-phone" placeholder="+91 XXXXX XXXXX" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="reg-events">Interested Events</label>
+              <select id="reg-events">
+                <option value="">Select an event</option>
+                <option>HackNova 2026</option>
+                <option>Dance Inferno</option>
+                <option>RoboWars</option>
+                <option>Battle of Bands</option>
+                <option>Valorant Championship</option>
+                <option>Startup Pitch Arena</option>
+                <option>All Events</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="register-btn">
+              🔥 Register Now — It's Free!
+            </button>
+          </form>
+          <!-- Success Message -->
+          <div class="success-message" id="success-message">
+            <div class="success-icon">🎉</div>
+            <h3 id="success-text">Thank you! You are successfully registered.</h3>
+            <p class="success-sub">We've sent a confirmation to your email. See you at the fest!</p>
+            <button class="btn btn-primary" id="success-close">← Register Another</button>
+          </div>
+        </div>
+        <div class="register-perks">
+          <div class="perk">✅ Free Entry Pass</div>
+          <div class="perk">✅ Goodies & Swag Kit</div>
+          <div class="perk">✅ Certificate of Participation</div>
+          <div class="perk">✅ Food Coupons</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">
+            <img src="logo.png" alt="Ignite Logo" class="logo-icon" width="50px" height="50px">
+            <span class="logo-text">IGNITE<span class="logo-accent">'26</span></span>
+          </a>
+          <p>The biggest college festival of 2026. Three days of innovation, creativity, and unforgettable memories.</p>
+        </div>
+        <div class="footer-links-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#speakers">Speakers</a></li>
+            <li><a href="register.html">Register</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Events</h4>
+          <ul>
+            <li><a href="event-hacknova.html">HackNova</a></li>
+            <li><a href="event-dance.html">Dance Inferno</a></li>
+            <li><a href="event-robowars.html">RoboWars</a></li>
+            <li><a href="event-bands.html">Battle of Bands</a></li>
+            <li><a href="event-valorant.html">Valorant</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><a
+                href="https://www.google.com/maps/place/Amrita+Vishwa+Vidyapeetham,+Amaravati/@16.4559443,80.5342853,17z/data=!3m1!4b1!4m6!3m5!1s0x3a35f3b8d11685ad:0xae0ba33082b34cf6!8m2!3d16.4559443!4d80.5368602!16s%2Fg%2F11ghs44zyj?entry=ttu&g_ep=EgoyMDI2MDQxMi4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank">📍 Campus Central Arena</a></li>
+            <li><a href="mailto:ignite2342026@gmail.com">📧 ignite2342026@gmail.com</a></li>
+            <li><a href="tel:+919999999999">📞 +91 99999 99999</a></li>
+            <li>🕐 9 AM – 10 PM (Event Days)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-social-modern">
+        <h3 class="footer-social-text">Get in touch with us</h3>
+        <div class="footer-social-links">
+          <a href="https://www.instagram.com" target="_blank" class="social-link-modern instagram"
+            aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com" target="_blank" class="social-link-modern linkedin" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://x.com" target="_blank" class="social-link-modern x-twitter" aria-label="X (Twitter)">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 College Fest – Ignite the Future. All rights reserved.</p>
+        <p>Crafted with passion <img src="logo.png" alt="logo" width="20px" height="20px"
+            style="display:inline-block; vertical-align:middle; margin: 0 4px;"> by Student Council</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.querySelector('.register-form');
+    const successMsg = document.getElementById('success-message');
+    const successText = document.getElementById('success-text');
+    const closeBtn = document.getElementById('success-close');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = document.getElementById('reg-name').value.trim();
+      successText.textContent = 'Thank you, ' + name + '! You are successfully registered.';
+      form.style.display = 'none';
+      successMsg.style.display = 'flex';
+    });
+
+    closeBtn.addEventListener('click', function () {
+      form.reset();
+      form.style.display = 'flex';
+      successMsg.style.display = 'none';
+    });
+
+    const sponsorScroll = document.querySelector('.sponsor-logos-scroll');
+    let isDragging = false;
+    let startX = 0;
+    let scrollLeft = 0;
+
+    if (sponsorScroll) {
+      sponsorScroll.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        sponsorScroll.classList.add('dragging');
+        startX = e.pageX - sponsorScroll.offsetLeft;
+        scrollLeft = sponsorScroll.scrollLeft;
+      });
+
+      sponsorScroll.addEventListener('mouseleave', () => {
+        isDragging = false;
+        sponsorScroll.classList.remove('dragging');
+      });
+
+      sponsorScroll.addEventListener('mouseup', () => {
+        isDragging = false;
+        sponsorScroll.classList.remove('dragging');
+      });
+
+      sponsorScroll.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        e.preventDefault();
+        const x = e.pageX - sponsorScroll.offsetLeft;
+        const walk = (x - startX) * 1.5;
+        sponsorScroll.scrollLeft = scrollLeft - walk;
+      });
+
+      sponsorScroll.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].pageX - sponsorScroll.offsetLeft;
+        scrollLeft = sponsorScroll.scrollLeft;
+      });
+
+      sponsorScroll.addEventListener('touchmove', (e) => {
+        const x = e.touches[0].pageX - sponsorScroll.offsetLeft;
+        const walk = (x - startX) * 1.5;
+        sponsorScroll.scrollLeft = scrollLeft - walk;
+      });
+
+      const sponsorSection = document.getElementById('sponsors');
+      const updateSponsorScrollFromPage = () => {
+        if (!sponsorSection || !sponsorScroll) return;
+        const rect = sponsorSection.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        const progress = Math.min(Math.max((windowHeight - rect.top) / (windowHeight + rect.height), 0), 1);
+        const maxScroll = sponsorScroll.scrollWidth - sponsorScroll.clientWidth;
+        sponsorScroll.scrollLeft = maxScroll * progress;
+      };
+
+      window.addEventListener('scroll', updateSponsorScrollFromPage, { passive: true });
+      window.addEventListener('resize', updateSponsorScrollFromPage);
+      updateSponsorScrollFromPage();
+    }
+  </script>
+
+</body>
+
+</html>
