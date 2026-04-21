@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Stalls – College Fest 2026 | Ignite the Future</title>
+  <meta name="description"
+    content="Explore the tastiest food stalls at College Fest 2026. Burgers, smoothies, tacos, pizza and more!" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">✅ Added to Stash!</div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="nav-logo">
+        <img src="logo.png" alt="Ignite Logo" class="logo-icon" width="50px" height="50px">
+        <span class="logo-text">IGNITE<span class="logo-accent">'26</span></span>
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="register.html" class="nav-cta">Register Now</a></li>
+    </ul>
+  </nav>
+
+  <!-- Floating Cart Button -->
+  <div class="floating-cart" onclick="openModal('cart-modal')">
+    🛒
+    <div class="cart-badge" id="cart-count">0</div>
+  </div>
+
+  <!-- ===== FOOD STALLS SECTION ===== -->
+  <section class="events food-stalls-page" id="food-stalls">
+    <div class="register-bg-effects">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+    </div>
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Grub Alert 🚨</span>
+        <h1 class="section-title">Food Stalls</h1>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="events-grid">
+
+        <!-- Stall 1: Burgers -->
+        <div class="event-card">
+          <div class="event-image grad-1"><span class="event-emoji">🍔</span></div>
+          <div class="event-badge badge-cultural">Bussin'</div>
+          <div class="event-content">
+            <h3>Bussin' Burgers</h3>
+            <p>Smash burgers crafted with premium patties, melted cheese, and secret sauces. The fest favorite!</p>
+            <button class="view-menu-btn" onclick="openModal('modal-burgers')">View Menu 👀</button>
+          </div>
+        </div>
+
+        <!-- Stall 2: Smoothies -->
+        <div class="event-card">
+          <div class="event-image grad-2"><span class="event-emoji">🥤</span></div>
+          <div class="event-badge badge-sports">Fresh</div>
+          <div class="event-content">
+            <h3>Slay Smoothies</h3>
+            <p>Stay cool with fresh berry blends, tropical mixes, and creamy matcha shakes. Pure refreshment.</p>
+            <button class="view-menu-btn" onclick="openModal('modal-smoothies')">View Menu 👀</button>
+          </div>
+        </div>
+
+        <!-- Stall 3: Tacos -->
+        <div class="event-card">
+          <div class="event-image grad-3"><span class="event-emoji">🌮</span></div>
+          <div class="event-badge">Spicy</div>
+          <div class="event-content">
+            <h3>No Cap Tacos</h3>
+            <p>Handmade shells loaded with seasoned fillings, fresh guac, and fiery salsa. Heat alert!</p>
+            <button class="view-menu-btn" onclick="openModal('modal-tacos')">View Menu 👀</button>
+          </div>
+        </div>
+
+        <!-- Stall 4: Pizza -->
+        <div class="event-card">
+          <div class="event-image grad-4"><span class="event-emoji">🍕</span></div>
+          <div class="event-badge badge-cultural">Elite</div>
+          <div class="event-content">
+            <h3>G.O.A.T. Pizzas</h3>
+            <p>Wood-fired artisan pizzas with stretchy cheese, hand-tossed dough, and premium toppings.</p>
+            <button class="view-menu-btn" onclick="openModal('modal-pizza')">View Menu 👀</button>
+          </div>
+        </div>
+
+        <!-- Stall 5: Biryani -->
+        <div class="event-card">
+          <div class="event-image grad-5"><span class="event-emoji">🍛</span></div>
+          <div class="event-badge">Hot</div>
+          <div class="event-content">
+            <h3>Royal Biryani House</h3>
+            <p>Slow-cooked Hyderabadi dum biryani with aromatic spices, raita, and salan. A royal feast.</p>
+            <button class="view-menu-btn" onclick="openModal('modal-biryani')">View Menu 👀</button>
+          </div>
+        </div>
+
+        <!-- Stall 6: Desserts -->
+        <div class="event-card">
+          <div class="event-image grad-6"><span class="event-emoji">🍩</span></div>
+          <div class="event-badge badge-sports">Sweet</div>
+          <div class="event-content">
+            <h3>Sugar Rush</h3>
+            <p>Loaded donuts, Belgian waffles, churros with chocolate, and creamy ice cream sundaes.</p>
+            <button class="view-menu-btn" onclick="openModal('modal-desserts')">View Menu 👀</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================== -->
+  <!-- MODALS                          -->
+  <!-- =============================== -->
+
+  <!-- Modal: Burgers -->
+  <div id="modal-burgers" class="modal-overlay" onclick="handleOutsideClick(event, 'modal-burgers')">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal('modal-burgers')">✕</button>
+      <h2 class="modal-title">🍔 Bussin' Burgers</h2>
+      <p class="modal-desc">Premium smash burgers with secret sauces. The fest's #1 stall!</p>
+      <div class="food-list">
+        <div class="food-item">
+          <div class="item-vision">🍔</div>
+          <div class="item-details">
+            <h4 class="item-title">Classic Smash</h4>
+            <p class="item-desc-small">Single beef patty, melted cheddar, caramelized onions, secret sauce.</p>
+            <span class="price-tag">₹150</span>
+          </div>
+          <button class="add-btn" onclick="addToCart('Classic Smash', 150, '🍔')">Add 🛒</button>
+        </div>
+        <div class="food-item">
+          <div class="item-vision">🥓</div>
+          <div class="item-details">
+            <h4 class="item-title">Double Truffle</h4>
+            <p class="item-desc-small">Double patty, truffle aioli, arugula, smoked gouda.</p>
+            <span class="price-tag">₹250</span>
+          </div>
+          <button class="add-btn" onclick="addToCart('Double Truffle', 250, '🥓')">Add 🛒</button>
+        </div>
+        <div class="food-item">
+          <div class="item-vision">🍟</div>
+          <div class="item-details">
+            <h4 class="item-title">Loaded Fries</h4>
+            <p class="item-desc-small">Crispy fries topped with cheese sauce, jalapeños, and bacon bits.</p>
+            <span class="price-tag">₹120</span>
+          </div>
+          <button class="add-btn" onclick="addToCart('Loaded Fries', 120, '🍟')">Add 🛒</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Smoothies -->
+  <div id="modal-smoothies" class="modal-overlay" onclick="handleOutsideClick(event, 'modal-smoothies')">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal('modal-smoothies')">✕</button>
+      <h2 class="modal-title">🥤 Slay Smoothies</h2>
+      <p class="modal-desc">Fresh blended drinks to keep you hydrated and energized all day.</p>
+      <div class="food-list">
+        <div class="food-item">
+          <div class="item-vision">🍓</div>
+          <div class="item-details">
+            <h4 class="item-title">Berry Blast</h4>
+            <p class="item-desc-small">Strawberries, blueberries, banana, and Greek yogurt blend.</p>
+            <span class="price-tag">₹120</span>
+          </div>
+          <button class="add-btn" onclick="addToCart('Berry Blast', 120, '🍓')">Add 🛒</button>
+        </div>
+        <div class="food-item">
+          <div class="item-vision">🍵</div>
+          <div class="item-details">
+            <h4 class="item-title">Matcha Madness</h4>
+            <p class="item-desc-small">Premium Japanese matcha, oat milk, and honey.</p>
+            <span class="price-tag">₹150</span>
+          </div>
+          <button class="add-btn" onclick="addToCart('Matcha Madness', 150, '🍵')">Add 🛒</button>
+        </div>
+        <div class="food-item">
+          <div class="item-vision">🥭</div>
+          <div class="item-details">
+            <h4 class="item-title">Tropical Mango</h4>
+            <p class="item-desc-small">Alphonso mango, coconut cream, and a dash of lime.</p>
+            <span class="price-tag">₹130</span>
+          </div>
+          <button class="add-btn" onclick="addToCart('Tropical Mango', 130, '🥭')">Add 🛒</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Tacos -->
+  <div id="modal-tacos" class="modal-overlay" onclick="handleOutsideClick(event, 'modal-tacos')">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal('modal-tacos')">✕</button>
+      <h2 class="modal-title">🌮 No Cap Tacos</h2>
+      <p class="modal-desc">Handmade tortillas loaded with bold flavors and fresh toppings!</p>
+      <div class="food-list">
+        <div class="food-item">
+          <div class="item-vision">🌮</div>
+          <div class="item-details">
+            <h4 class="item-title">Birria Tacos</h4>
+            <p class="item-desc-small">Slow-braised spiced meat in crispy tortilla with consommé.</p>
+            <span class="price-tag">₹200</span>
+          </div>
+          <button class="add-btn" onclick="addToCart('Birria Tacos', 200, '🌮')">Add 🛒</button>
+        </div>
+        <div class="food-item">
+          <div class="item-vision">🥑</div>
+          <div class="item-details">
+            <h4 class="item-title">Guac Supreme</h4>
+            <p class="item-desc-small">Fresh guacamole, pico de gallo, and cotija cheese.</p>
+            <span class="price-tag">₹180</span>
+          </div>
+          <button class="add-btn" onclick="addToCart('Guac Supreme', 180, '🥑')">Add 🛒</button>
+        </div>
+        <div class="food-item">
+          <div class="item-vision">🌶️</div>
+          <div class="item-details">
+            <h4 class="item-title">Fire Chicken</h4>
+            <p class="item-desc-small">Nashville hot chicken, slaw, and pickled onions in a soft tortilla.</p>
+            <span class="price-tag">₹220</span>
+          </div>
+          <button class="add-btn" onclick="addToCart('Fire Chicken', 220, '🌶️')">Add 🛒</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Pizza -->
+  <div id="modal-pizza" class="modal-overlay" onclick="handleOutsideClick(event, 'modal-pizza')">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal('modal-pizza')">✕</button>
+      <h2 class="modal-title">🍕 G.O.A.T. Pizzas</h2>
+      <p class="modal-desc">Wood-fired artisan pizzas — grab a slice before they sell out!</p>
+      <div class="food-list">
+        <div class="food-item">
+          <div class="item-vision">🍕</div>
+          <div class="item-details">
+            <h4 class="item-title">Margherita Classic</h4>
+            <p class="item-desc-small">San Marzano tomatoes, fresh mozzarella, and basil on thin crust.</p>
+            <span class="price-tag">₹250</span>
+          </div>
+          <button class="add-btn" onclick="addToCart('Margherita Classic', 250, '🍕')">Add 🛒</button>
+        </div>
+        <div class="food-item">
+          <div class="item-vision">🤌</div>
+          <div class="item-details">
+            <h4 class="item-title">Pepperoni Supreme</h4>
+            <p class="item-desc-small">Loaded pepperoni, mozzarella, and red chili flakes. Insane cheese pull!</p>
+            <span class="price-tag">₹350</span>
+          </div>
+          <button class="add-btn" onclick="addToCart('Pepperoni Supreme', 350, '🤌')">Add 🛒</button>
+        </div>
+        <div class="food-item">
+          <div class="item-vision">🧀</div>
+          <div class="item-details">
+            <h4 class="item-title">Four Cheese</h4>
+            <p class="item-desc-small">Mozzarella, gorgonzola, parmesan, and ricotta on garlic butter base.</p>
+            <span class="price-tag">₹300</span>
+          </div>
+          <button class="add-btn" onclick="addToCart('Four Cheese', 300, '🧀')">Add 🛒</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Biryani -->
+  <div id="modal-biryani" class="modal-overlay" onclick="handleOutsideClick(event, 'modal-biryani')">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal('modal-biryani')">✕</button>
+      <h2 class="modal-title">🍛 Royal Biryani House</h2>
+      <p class="modal-desc">Authentic Hyderabadi dum biryani cooked to perfection!</p>
+      <div class="food-list">
+        <div class="food-item">
+          <div class="item-vision">🍛</div>
+          <div class="item-details">
+            <h4 class="item-title">Chicken Dum Biryani</h4>
+            <p class="item-desc-small">Long-grain basmati, marinated chicken, saffron, and dum-cooked.</p>
+            <span class="price-tag">₹200</span>
+          </div>
+          <button class="add-btn" onclick="addToCart('Chicken Biryani', 200, '🍛')">Add 🛒</button>
+        </div>
+        <div class="food-item">
+          <div class="item-vision">🥩</div>
+          <div class="item-details">
+            <h4 class="item-title">Mutton Special</h4>
+            <p class="item-desc-small">Slow-cooked mutton with aromatic spices and crispy fried onions.</p>
+            <span class="price-tag">₹280</span>
+          </div>
+          <button class="add-btn" onclick="addToCart('Mutton Biryani', 280, '🥩')">Add 🛒</button>
+        </div>
+        <div class="food-item">
+          <div class="item-vision">🥬</div>
+          <div class="item-details">
+            <h4 class="item-title">Paneer Biryani</h4>
+            <p class="item-desc-small">Rich paneer tikka layered with fragrant rice and mint chutney.</p>
+            <span class="price-tag">₹180</span>
+          </div>
+          <button class="add-btn" onclick="addToCart('Paneer Biryani', 180, '🥬')">Add 🛒</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Desserts -->
+  <div id="modal-desserts" class="modal-overlay" onclick="handleOutsideClick(event, 'modal-desserts')">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal('modal-desserts')">✕</button>
+      <h2 class="modal-title">🍩 Sugar Rush</h2>
+      <p class="modal-desc">Satisfy your sweet tooth with our irresistible dessert selection!</p>
+      <div class="food-list">
+        <div class="food-item">
+          <div class="item-vision">🍩</div>
+          <div class="item-details">
+            <h4 class="item-title">Loaded Donuts</h4>
+            <p class="item-desc-small">Brioche donuts with Nutella glaze, sprinkles, and cream filling.</p>
+            <span class="price-tag">₹100</span>
+          </div>
+          <button class="add-btn" onclick="addToCart('Loaded Donuts', 100, '🍩')">Add 🛒</button>
+        </div>
+        <div class="food-item">
+          <div class="item-vision">🧇</div>
+          <div class="item-details">
+            <h4 class="item-title">Belgian Waffles</h4>
+            <p class="item-desc-small">Crispy waffles with ice cream, strawberries, and maple syrup.</p>
+            <span class="price-tag">₹180</span>
+          </div>
+          <button class="add-btn" onclick="addToCart('Belgian Waffles', 180, '🧇')">Add 🛒</button>
+        </div>
+        <div class="food-item">
+          <div class="item-vision">🍫</div>
+          <div class="item-details">
+            <h4 class="item-title">Churros & Chocolate</h4>
+            <p class="item-desc-small">Cinnamon sugar churros with warm Belgian chocolate dip.</p>
+            <span class="price-tag">₹140</span>
+          </div>
+          <button class="add-btn" onclick="addToCart('Churros & Chocolate', 140, '🍫')">Add 🛒</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Cart / Checkout -->
+  <div id="cart-modal" class="modal-overlay" onclick="handleOutsideClick(event, 'cart-modal')">
+    <div class="modal-content" style="max-width: 500px;">
+      <button class="close-btn" onclick="closeModal('cart-modal')">✕</button>
+      <h2 class="modal-title">🛍️ Your Stash</h2>
+      <p class="modal-desc" style="margin-bottom: 1rem;">Review your order and checkout!</p>
+
+      <div id="cart-items-container"
+        style="max-height: 45vh; overflow-y: auto; margin-bottom: 1.5rem; padding-right: 10px;">
+        <!-- Injected via JS -->
+      </div>
+
+      <div
+        style="display: flex; justify-content: space-between; align-items: center; border-top: 2px dashed rgba(255,255,255,0.08); padding-top: 1.5rem; margin-top: 1rem;">
+        <div style="font-size: 1.5rem; font-weight: 800; color: var(--text-primary);">Total:</div>
+        <div id="cart-total" style="font-size: 2rem; font-weight: 800; color: #34d399;">₹0</div>
+      </div>
+
+      <button class="add-btn"
+        style="width: 100%; margin-top: 1.5rem; font-size: 1.1rem; padding: 1rem; background: linear-gradient(135deg, #10b981, #059669); box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);"
+        onclick="checkout()">Checkout & Pay 💸</button>
+    </div>
+  </div>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    let cart = [];
+
+    function openModal(modalId) {
+      document.getElementById(modalId).classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(modalId) {
+      document.getElementById(modalId).classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function handleOutsideClick(event, modalId) {
+      if (event.target.id === modalId) closeModal(modalId);
+    }
+
+    function addToCart(name, price, emoji) {
+      cart.push({ name, price, emoji });
+      updateCartUI();
+      const toast = document.getElementById('toast');
+      toast.innerText = `${emoji} ${name} added!`;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2000);
+    }
+
+    function removeFromCart(index) {
+      cart.splice(index, 1);
+      updateCartUI();
+    }
+
+    function updateCartUI() {
+      document.getElementById('cart-count').innerText = cart.length;
+      const container = document.getElementById('cart-items-container');
+      const totalEl = document.getElementById('cart-total');
+
+      if (cart.length === 0) {
+        container.innerHTML = '<div style="text-align:center;padding:3rem 1rem;color:rgba(240,240,245,0.4);font-size:1rem;">Your stash is empty! Browse the stalls above. 🍽️</div>';
+        totalEl.innerText = '₹0';
+        return;
+      }
+
+      let html = '';
+      let total = 0;
+      cart.forEach((item, index) => {
+        total += item.price;
+        html += `
+          <div style="display:flex;align-items:center;background:rgba(255,255,255,0.04);padding:1rem;border-radius:16px;margin-bottom:0.8rem;border:1px solid rgba(255,255,255,0.05);">
+            <div style="font-size:2rem;margin-right:1rem;">${item.emoji}</div>
+            <div style="flex:1;">
+              <div style="font-weight:600;font-size:1rem;color:#f0f0f5;">${item.name}</div>
+              <div style="color:#34d399;font-weight:800;font-size:0.95rem;">₹${item.price}</div>
+            </div>
+            <button onclick="removeFromCart(${index})" style="background:none;border:none;font-size:1.2rem;cursor:pointer;opacity:0.6;transition:opacity 0.2s;padding:8px;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">🗑️</button>
+          </div>`;
+      });
+
+      container.innerHTML = html;
+      totalEl.innerText = `₹${total}`;
+    }
+
+    function checkout() {
+      if (cart.length === 0) {
+        alert('Add something first! Browse the food stalls.');
+        return;
+      }
+      const total = cart.reduce((sum, item) => sum + item.price, 0);
+      alert(`Order placed! Total: ₹${total}. Pay at the counter! 🎉`);
+      cart = [];
+      updateCartUI();
+      closeModal('cart-modal');
+    }
+
+    updateCartUI();
+  </script>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <img src="logo.png" alt="Ignite Logo" class="logo-icon" width="50px" height="50px">
+            <span class="logo-text">IGNITE<span class="logo-accent">'26</span></span>
+          </a>
+          <p>The biggest college festival of 2026. Three days of innovation, creativity, and unforgettable memories.</p>
+        </div>
+        <div class="footer-links-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="index.html#schedule">Schedule</a></li>
+            <li><a href="index.html#speakers">Speakers</a></li>
+            <li><a href="register.html">Register</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Events</h4>
+          <ul>
+            <li><a href="event-hacknova.html">HackNova</a></li>
+            <li><a href="event-dance.html">Dance Inferno</a></li>
+            <li><a href="event-robowars.html">RoboWars</a></li>
+            <li><a href="event-bands.html">Battle of Bands</a></li>
+            <li><a href="event-valorant.html">Valorant</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><a href="https://www.google.com/maps/place/Amrita+Vishwa+Vidyapeetham,+Amaravati/@16.4559443,80.5342853,17z/data=!3m1!4b1!4m6!3m5!1s0x3a35f3b8d11685ad:0xae0ba33082b34cf6!8m2!3d16.4559443!4d80.5368602!16s%2Fg%2F11ghs44zyj?entry=ttu&g_ep=EgoyMDI2MDQxMi4wIKXMDSoASAFQAw%3D%3D" target="_blank">📍 Campus Central Arena</a></li>
+            <li><a href="mailto:ignite2342026@gmail.com">📧 ignite2342026@gmail.com</a></li>
+            <li><a href="tel:+919999999999">📞 +91 99999 99999</a></li>
+            <li>🕐 9 AM – 10 PM (Event Days)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-social-modern">
+        <h3 class="footer-social-text">Get in touch with us</h3>
+        <div class="footer-social-links">
+          <a href="https://www.instagram.com" target="_blank" class="social-link-modern instagram" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com" target="_blank" class="social-link-modern linkedin" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://x.com" target="_blank" class="social-link-modern x-twitter" aria-label="X (Twitter)">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 College Fest – Ignite the Future. All rights reserved.</p>
+        <p>Crafted with passion <img src="logo.png" alt="logo" width="20px" height="20px" style="display:inline-block; vertical-align:middle; margin: 0 4px;"> by Student Council</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
