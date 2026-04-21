@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registration Receipt – Ignite '26</title>
+  <meta name="description" content="Your registration receipt for Ignite '26. See you at the fest!" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    /* Receipt Specific Styles */
+    .receipt-container {
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 20px;
+      background: var(--bg-deep); /* Consistent with style.css */
+      position: relative;
+      overflow: hidden;
+    }
+
+    .receipt-card {
+      background: var(--bg-card);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: var(--shadow-card);
+      position: relative;
+      z-index: 10;
+      animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .receipt-header {
+      text-align: center;
+      margin-bottom: 30px;
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+      padding-bottom: 20px;
+    }
+
+    .receipt-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 15px;
+    }
+
+    .receipt-logo img {
+      width: 60px;
+      height: 60px;
+    }
+
+    .receipt-logo .logo-text {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: #fff;
+    }
+
+    .receipt-title {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--accent-orange);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .receipt-id {
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: 5px;
+    }
+
+    .receipt-body {
+      margin-bottom: 30px;
+    }
+
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--glass-border);
+    }
+
+    .info-label {
+      color: var(--text-secondary);
+      font-weight: 500;
+      font-family: var(--font-body);
+    }
+
+    .info-value {
+      color: var(--text-primary);
+      font-weight: 600;
+      text-align: right;
+      font-family: var(--font-body);
+    }
+
+    .receipt-qr {
+      text-align: center;
+      margin: 30px 0;
+      padding: 15px;
+      background: #fff;
+      border-radius: var(--radius-md);
+      display: inline-block;
+      width: 130px;
+      height: 130px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    }
+
+    .receipt-qr img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .receipt-footer {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      line-height: 1.6;
+      font-family: var(--font-body);
+    }
+
+    .receipt-actions {
+      display: flex;
+      gap: 15px;
+      margin-top: 30px;
+      justify-content: center;
+      border-top: 1px solid var(--glass-border);
+      padding-top: 25px;
+    }
+
+    .btn-print {
+      background: var(--gradient-primary);
+      color: #fff;
+      border: none;
+      padding: 12px 25px;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: var(--transition-smooth);
+      box-shadow: 0 4px 15px rgba(255, 106, 61, 0.3);
+      font-family: var(--font-body);
+    }
+
+    .btn-print:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(255, 106, 61, 0.5);
+    }
+
+    .btn-home {
+      background: var(--glass);
+      color: var(--text-primary);
+      border: 1px solid var(--glass-border);
+      padding: 12px 25px;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      transition: var(--transition-smooth);
+      font-family: var(--font-body);
+    }
+
+    .btn-home:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: var(--accent-purple);
+    }
+
+    .receipt-bg-glow {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(255, 106, 61, 0.12) 0%, transparent 70%);
+      filter: blur(100px);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+
+    /* Print Styles */
+    @media print {
+
+      .navbar,
+      .footer,
+      .receipt-actions,
+      .receipt-bg-glow,
+      .bg-effects,
+      .register-bg-effects {
+        display: none !important;
+      }
+
+      body {
+        background: white !important;
+        color: black !important;
+      }
+
+      .receipt-container {
+        padding: 0 !important;
+        background: white !important;
+        min-height: auto !important;
+      }
+
+      .receipt-card {
+        box-shadow: none !important;
+        border: 2px solid #000 !important;
+        background: white !important;
+        backdrop-filter: none !important;
+        color: black !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 20px !important;
+      }
+
+      .receipt-title,
+      .info-value,
+      .logo-text {
+        color: black !important;
+      }
+
+      .info-label {
+        color: #666 !important;
+      }
+
+      .receipt-header {
+        border-bottom: 2px solid #000 !important;
+      }
+
+      .info-row {
+        border-bottom: 1px solid #ddd !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="nav-logo">
+        <img src="logo.png" alt="Ignite Logo" class="logo-icon" width="50px" height="50px">
+        <span class="logo-text">IGNITE<span class="logo-accent">'26</span></span>
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">← Back to Home</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== RECEIPT SECTION ===== -->
+  <main class="receipt-container">
+    <div class="receipt-bg-glow"></div>
+
+    <div class="receipt-card" id="receipt-content">
+      <div class="receipt-header">
+        <div class="receipt-logo">
+          <img src="logo.png" alt="Ignite Logo">
+          <span class="logo-text">IGNITE<span class="logo-accent">'26</span></span>
+        </div>
+        <h2 class="receipt-title">Registration Receipt</h2>
+        <p class="receipt-id">ID: <span id="r-id">IGN-2026-XXXXX</span></p>
+      </div>
+
+      <div class="receipt-body">
+        <div class="info-row">
+          <span class="info-label">Full Name</span>
+          <span class="info-value" id="r-name">Loading...</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Email Address</span>
+          <span class="info-value" id="r-email">Loading...</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Campus</span>
+          <span class="info-value" id="r-campus">Loading...</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Phone Number</span>
+          <span class="info-value" id="r-phone">Loading...</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Selected Event</span>
+          <span class="info-value" id="r-event">Loading...</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Registry Date</span>
+          <span class="info-value" id="r-date">Loading...</span>
+        </div>
+      </div>
+
+      <div class="receipt-qr">
+        <!-- Placeholder for QR code -->
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=IGNITE26-SUCCESS" alt="QR Code"
+          id="r-qr">
+      </div>
+
+      <div class="receipt-footer">
+        <p>Please present this receipt at the entry gate.</p>
+        <p>This is a computer-generated receipt and does not require a signature.</p>
+      </div>
+
+      <div class="receipt-actions">
+        <button class="btn-print" onclick="window.print()">
+          <i class="fas fa-print"></i> Print Receipt
+        </button>
+        <a href="index.html" class="btn-home">
+          <i class="fas fa-home"></i> Back to Home
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-bottom" style="text-align: center; padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.1);">
+        <p>&copy; 2026 College Fest – Ignite the Future. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="receipts.js"></script>
+</body>
+
+</html>

@@ -138,6 +138,18 @@ img {
   transition: var(--transition-smooth);
 }
 
+.navbar-scrolled {
+  padding: 10px 32px;
+  background: rgba(6, 6, 17, 0.95);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border-color: rgba(168, 85, 247, 0.2);
+}
+
+.dragging {
+  cursor: grabbing;
+  scroll-behavior: auto !important;
+}
+
 .nav-logo {
   display: flex;
   align-items: center;

@@ -115,26 +115,7 @@
     </div>
   </section>
 
-  <script>
-    const form = document.querySelector('.register-form');
-    const successMsg = document.getElementById('success-message');
-    const successText = document.getElementById('success-text');
-    const closeBtn = document.getElementById('success-close');
-
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      const name = document.getElementById('reg-name').value.trim();
-      successText.textContent = 'Thank you, ' + name + '! You are successfully registered.';
-      form.style.display = 'none';
-      successMsg.style.display = 'flex';
-    });
-
-    closeBtn.addEventListener('click', function () {
-      form.reset();
-      form.style.display = 'flex';
-      successMsg.style.display = 'none';
-    });
-  </script>
+  <script src="script.js"></script>
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer" id="contact">
