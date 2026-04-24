@@ -26,6 +26,15 @@
         <span class="logo-text">IGNITE<span class="logo-accent">'26</span></span>
       </a>
     </div>
+<<<<<<< HEAD
+=======
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox" />
+    <label for="nav-toggle" class="nav-toggle-label">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+>>>>>>> 6c73199b896529b5eb319e36f4121165094447b1
     <ul class="nav-links">
       <li><a href="index.html">← Back to Home</a></li>
     </ul>
@@ -81,6 +90,7 @@
             </div>
             <div class="form-group">
               <label for="reg-events">Interested Events</label>
+<<<<<<< HEAD
               <select id="reg-events">
                 <option value="">Select an event</option>
                 <option>HackNova 2026</option>
@@ -100,6 +110,30 @@
                 <option>Master of Jokes</option>
                 <option>All Events</option>
               </select>
+=======
+              <div class="custom-dropdown" id="events-dropdown">
+                <input type="hidden" id="reg-events" name="event" required>
+                <div class="dropdown-trigger">Select an event</div>
+                <div class="dropdown-options">
+                  <div class="option-item" data-value="HackNova 2026">HackNova 2026</div>
+                  <div class="option-item" data-value="RoboWars">RoboWars</div>
+                  <div class="option-item" data-value="Capture The Flag">Capture The Flag</div>
+                  <div class="option-item" data-value="Valorant Championship">Valorant Championship</div>
+                  <div class="option-item" data-value="Rocket League Showdown">Rocket League Showdown</div>
+                  <div class="option-item" data-value="The Tech Quiz">The Tech Quiz</div>
+                  <div class="option-item" data-value="Dance Inferno">Dance Inferno</div>
+                  <div class="option-item" data-value="Battle of Bands">Battle of Bands</div>
+                  <div class="option-item" data-value="Pixel Perfect">Pixel Perfect</div>
+                  <div class="option-item" data-value="Code Golf">Code Golf</div>
+                  <div class="option-item" data-value="Street Art Graffiti">Street Art Graffiti</div>
+                  <div class="option-item" data-value="Startup Pitch Arena">Startup Pitch Arena</div>
+                  <div class="option-item" data-value="Infinite Echoes (Fashion Show)">Infinite Echoes (Fashion Show)</div>
+                  <div class="option-item" data-value="Cinematic Magic (Short Film)">Cinematic Magic (Short Film)</div>
+                  <div class="option-item" data-value="Master of Jokes (Stand-up Comedy)">Master of Jokes (Stand-up Comedy)</div>
+                  <div class="option-item" data-value="All Events">All Events</div>
+                </div>
+              </div>
+>>>>>>> 6c73199b896529b5eb319e36f4121165094447b1
             </div>
             <button type="submit" class="btn btn-primary btn-full" id="register-btn">
               🔥 Register Now — It's Free!
@@ -124,6 +158,82 @@
     </div>
   </section>
 
+<<<<<<< HEAD
+=======
+  <script>
+    // Registration Form Logic
+    const form = document.querySelector('.register-form');
+    const registerBtn = document.getElementById('register-btn');
+
+    if (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Capture Form Data
+        const name = document.getElementById('reg-name').value.trim();
+        const email = document.getElementById('reg-email').value.trim();
+        const campus = document.getElementById('reg-college').value;
+        const phone = document.getElementById('reg-phone').value.trim();
+        const eventSelect = document.getElementById('reg-events'); // Hidden input from custom dropdown
+
+        const registrationData = {
+          name: name,
+          email: email,
+          campus: campus,
+          phone: phone,
+          event: eventSelect.value || 'All Events',
+          date: new Date().toISOString()
+        };
+
+        // Save to localStorage for the Receipt Page
+        localStorage.setItem('ignite_registration', JSON.stringify(registrationData));
+
+        // Visual feedback on button
+        if (registerBtn) {
+          registerBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+          registerBtn.style.opacity = '0.7';
+          registerBtn.disabled = true;
+        }
+
+        // Redirect to receipt page after a brief delay
+        setTimeout(() => {
+          window.location.href = 'receipt.html';
+        }, 800);
+      });
+    }
+
+    // Custom Dropdown Logic
+    const dropdown = document.getElementById('events-dropdown');
+    if (dropdown) {
+      const trigger = dropdown.querySelector('.dropdown-trigger');
+      const options = dropdown.querySelectorAll('.option-item');
+      const hiddenInput = document.getElementById('reg-events');
+
+      trigger.addEventListener('click', () => {
+        dropdown.classList.toggle('active');
+      });
+
+      options.forEach(option => {
+        option.addEventListener('click', () => {
+          const value = option.getAttribute('data-value');
+          trigger.textContent = value;
+          hiddenInput.value = value;
+          options.forEach(opt => opt.classList.remove('selected'));
+          option.classList.add('selected');
+          dropdown.classList.remove('active');
+        });
+      });
+
+      // Close dropdown when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!dropdown.contains(e.target)) {
+          dropdown.classList.remove('active');
+        }
+      });
+    }
+  </script>
+
+>>>>>>> 6c73199b896529b5eb319e36f4121165094447b1
   <script src="script.js"></script>
 
   <!-- ===== FOOTER ===== -->
