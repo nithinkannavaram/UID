@@ -138,7 +138,6 @@ img {
   transition: var(--transition-smooth);
 }
 
-<<<<<<< HEAD
 .navbar-scrolled {
   padding: 10px 32px;
   background: rgba(6, 6, 17, 0.95);
@@ -151,8 +150,6 @@ img {
   scroll-behavior: auto !important;
 }
 
-=======
->>>>>>> 6c73199b896529b5eb319e36f4121165094447b1
 .nav-logo {
   display: flex;
   align-items: center;
